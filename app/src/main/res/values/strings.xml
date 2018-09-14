@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Score Keeper App</string>
+    <string name="team_b">TEAM B</string>
+    <string name="score_b">SCORE B</string>
+    <string name="dash">-</string>
+    <string name="team_a">TEAM A</string>
+    <string name="score_a">SCORE A</string>
+</resources>
