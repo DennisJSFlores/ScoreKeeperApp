@@ -5,8 +5,12 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
@@ -18,6 +22,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private static final String TEAM_A_SCORE = "A";
     private static final String TEAM_B_SCORE = "B";
     private Button btn_Goal, btn_Foul, btn_Penal;
+
+    private Spinner spn_TEAM;
+    private String[] arrayTeam;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,8 +90,30 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                    d_Goal.dismiss();
                }
            });
-           d_Goal.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-           d_Goal.show();
+
+
+
+           spn_TEAM = findViewById(R.id.spn_team);
+           arrayTeam = getResources().getStringArray(R.array.teams_list);
+           ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item, arrayTeam);
+           adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+           spn_TEAM.setAdapter(adapter);
+           spn_TEAM.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+               @Override
+               public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                   Log.d("msg", "position " + arrayTeam[position]);
+               }
+
+               @Override
+               public void onNothingSelected(AdapterView<?> parent) {
+
+               }
+           });
+
+
+            d_Goal.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+            d_Goal.show();
+
         }
 
     }

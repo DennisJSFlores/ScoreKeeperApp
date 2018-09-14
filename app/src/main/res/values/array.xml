@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="teams_list">
+        <item>TEAM A</item>
+        <item>TEAM B</item>
+    </string-array>
+
+    <string-array name="players_team_a">
+        <item>Player 1</item>
+        <item>Player 2</item>
+        <item>Player 3</item>
+        <item>Player 4</item>
+        <item>Player 5</item>
+        <item>Player 6</item>
+        <item>Player 7</item>
+        <item>Player 8</item>
+        <item>Player 9</item>
+        <item>Player 10</item>
+        <item>Player 11</item>
+    </string-array>
+
+    <string-array name="players_team_b">
+        <item>Player 1</item>
+        <item>Player 2</item>
+        <item>Player 3</item>
+        <item>Player 4</item>
+        <item>Player 5</item>
+        <item>Player 6</item>
+        <item>Player 7</item>
+        <item>Player 8</item>
+        <item>Player 9</item>
+        <item>Player 10</item>
+        <item>Player 11</item>
+    </string-array>
+
+</resources>
